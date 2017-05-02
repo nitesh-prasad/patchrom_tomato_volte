@@ -30253,7 +30253,51 @@
     throw v1
 .end method
 
+.method public showBootMessage(Ljava/lang/CharSequence;Z)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
 .method public updateBootProgress(ILandroid/content/pm/ApplicationInfo;II)V
+    .locals 2
+    .param p1, "stage"    # I
+    .param p2, "optimizedApp"    # Landroid/content/pm/ApplicationInfo;
+    .param p3, "currentAppPos"    # I
+    .param p4, "totalAppCount"    # I
+
+    .prologue
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ","
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->showBootMessage(Ljava/lang/CharSequence;Z)V
+
+    return-void
+.end method
+
+.method public updateBootProgress_cm(ILandroid/content/pm/ApplicationInfo;II)V
     .locals 7
     .param p1, "stage"    # I
     .param p2, "optimizedApp"    # Landroid/content/pm/ApplicationInfo;

@@ -3414,6 +3414,18 @@
     goto :goto_0
 .end method
 
+.method public static opToDefaultMode(I)I
+    .locals 1
+    .param p0, "op"    # I
+
+    .prologue
+    sget-object v0, Landroid/app/AppOpsManager;->sOpDefaultMode:[I
+
+    aget v0, v0, p0
+
+    return v0
+.end method
+
 .method public static opToDefaultMode(IZ)I
     .locals 1
     .param p0, "op"    # I

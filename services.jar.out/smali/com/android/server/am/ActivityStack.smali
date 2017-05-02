@@ -8182,7 +8182,7 @@
     :cond_10
     iget-object v9, p1, Lcom/android/server/am/ActivityRecord;->packageName:Ljava/lang/String;
 
-    invoke-static {v9, v0, v3, v1}, Landroid/app/MiuiThemeHelper;->canKeepActivityAlive(Ljava/lang/String;ILandroid/content/res/Configuration;Landroid/content/res/Configuration;)Z
+    invoke-static {v9, v0, v4, v2}, Landroid/app/MiuiThemeHelper;->canKeepActivityAlive(Ljava/lang/String;ILandroid/content/res/Configuration;Landroid/content/res/Configuration;)Z
 
     move-result v9
 

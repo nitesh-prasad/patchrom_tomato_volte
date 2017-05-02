@@ -1,0 +1,23 @@
+From 57c54066a3eac4868d00bc11dd52bdb57344dd1e Mon Sep 17 00:00:00 2001
+From: garyyiu2015 <garyyiu2015@gmail.com>
+Date: Tue, 20 Dec 2016 23:42:36 +0800
+Subject: [PATCH] fix phone fc
+
+java.lang.SecurityException: NetworkPolicy: Neither user 1001 nor current process has android.permission.MANAGE_NETWORK_POLICY.
+---
+ TeleService/AndroidManifest.xml | 1 +
+ 1 file changed, 1 insertion(+)
+
+--- a/TeleService/AndroidManifest.xml
++++ b/TeleService/AndroidManifest.xml
+@@ -100,6 +100,7 @@
+     <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+     <uses-permission android:name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"/>
+     <uses-permission android:name="com.miui.antispam.permission.DATA_MONTH_REPORT"/>
++    <uses-permission android:name="android.permission.MANAGE_NETWORK_POLICY"/>
+     <uses-permission android:name="android.permission.STOP_APP_SWITCHES"/>
+     <application android:allowBackup="true" android:backupAgent=".settings.localbackup.PhoneSettingsLocalBackupAgent" android:icon="@mipmap/ic_launcher_phone" android:label="@string/phoneAppLabel" android:name="MiuiPhoneApp" android:persistent="true" android:supportsRtl="true" android:theme="@miui:style/Theme.Light" android:usesCleartextTraffic="true">
+         <provider android:authorities="icc" android:exported="true" android:multiprocess="true" android:name="IccProvider" android:readPermission="android.permission.READ_CONTACTS" android:singleUser="true" android:writePermission="android.permission.WRITE_CONTACTS"/>
+-- 
+2.7.4
+

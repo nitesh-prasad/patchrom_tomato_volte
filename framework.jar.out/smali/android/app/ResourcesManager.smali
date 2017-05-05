@@ -2799,13 +2799,13 @@
     .end local v18    # "iconsAttached":Z
     :cond_c
     :goto_7
-    new-instance v22, Landroid/content/res/Resources;
+    new-instance v22, Landroid/content/res/MiuiResources;
 
     move-object/from16 v0, v22
 
     move-object/from16 v1, p8
 
-    invoke-direct {v0, v7, v14, v13, v1}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
+    invoke-direct {v0, v7, v14, v13, v1}, Landroid/content/res/MiuiResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
 
     .line 295
     .local v22, "r":Landroid/content/res/Resources;

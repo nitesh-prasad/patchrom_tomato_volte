@@ -1,0 +1,4 @@
+persist.sys.klo=on
+persist.sys.mcd_config_file=/system/etc/mcd_default.conf
+persist.sys.miui_feature_config=/system/etc/miui_feature/lite.conf
+ro.miui.has_real_blur=0

@@ -1,0 +1,39 @@
+From 06112cbdaca9c3e86ef049ae779fd5d699034100 Mon Sep 17 00:00:00 2001
+From: garyyiu2015 <garyyiu2015@gmail.com>
+Date: Thu, 3 Nov 2016 19:22:39 +0800
+Subject: [PATCH] modified root 25s to 0s
+
+---
+ .../smali/com/miui/permcenter/root/RootApplyActivity.smali        | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+--- a/SecurityCenter/smali/com/miui/permcenter/root/RootApplyActivity.smali
++++ b/SecurityCenter/smali/com/miui/permcenter/root/RootApplyActivity.smali
+@@ -29,11 +29,11 @@
+ 
+     invoke-direct {p0}, Lcom/miui/common/c/a;-><init>()V
+ 
+-    const/4 v0, 0x1
++    const/4 v0, 0x5
+ 
+     iput v0, p0, Lcom/miui/permcenter/root/RootApplyActivity;->qp:I
+ 
+-    const/4 v0, 0x5
++    const/4 v0, 0x1
+ 
+     iput v0, p0, Lcom/miui/permcenter/root/RootApplyActivity;->qq:I
+ 
+@@ -469,6 +469,10 @@
+     invoke-virtual {p0}, Lcom/miui/permcenter/root/RootApplyActivity;->finish()V
+ 
+     :goto_0
++    iget-object v0, p0, Lcom/miui/permcenter/root/RootApplyActivity;->qo:Landroid/widget/Button;
++
++    invoke-virtual {v0}, Landroid/widget/Button;->performClick()Z
++
+     return-void
+ 
+     :cond_0
+-- 
+2.9.0
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+    <!--whether the device is port by patchrom-->
+    <bool name="is_patchrom">true</bool>
+    <!--whether the device is pad-->
+    <bool name="is_pad">false</bool>
+    <!--whether the device is xiaomi-->
+    <bool name="is_xiaomi">false</bool>
+    <!--whether the device is hongmi-->
+    <bool name="is_hongmi">false</bool>
+    <!--whether the device support alpha optimized-->
+    <bool name="support_alpha_optimized">true</bool>
+	<!--whether the device supports torch-->
+    <bool name="support_torch">true</bool>
+    <!--whether install the fm app-->
+    <bool name="support_fm">true</bool>
+    <!--whether the device supports oldman mode-->
+    <bool name="support_oldman_mode">false</bool>
+    <!--whether the device is dual sim card-->
+    <bool name="support_dual_sim_card">true</bool>
+    <!--whether the device has dual systems-->
+    <bool name="is_dual_system">false</bool>
+    <!--whether the device has dual sd card-->
+    <bool name="support_dual_sd_card">false</bool>
+    <!--whether the device supports bt debug trace-->
+    <bool name="btdebug_enabled">true</bool>
+    <!--whether the device supports page layout-->
+    <bool name="support_page_layout">false</bool>
+    <!--whether the device supports record param-->
+    <bool name="support_record_param">false</bool>
+    <!--whether the device supports interview record param-->
+    <bool name="support_interview_record_param">false</bool>
+    <!--whether the device supports stereo record-->
+    <bool name="support_stereo_record">false</bool>
+    <!--whether the device supports screen paper mode-->
+    <bool name="support_screen_paper_mode">true</bool>
+    <!--whether the device supports led light-->
+    <bool name="support_led_light">true</bool>
+    <!--whether the device supports button light-->
+    <bool name="support_button_light">true</bool>
+    <!--whether the device supports emulated storage-->
+    <bool name="support_emulated_storage">true</bool>
+    <!--whether the device supports internal sdcard-->
+    <bool name="support_internal_sdcard">true</bool>
+    <!--whether the device is mediatek-->
+    <bool name="is_mediatek">false</bool>
+    <!--whether the device supports erase external storage-->
+    <bool name="support_erase_external_storage">true</bool>
+    <!--whether the device supports headset-->
+    <bool name="support_headset">false</bool>
+    <!--whether the device supports cit-->
+    <bool name="support_cit">true</bool>
+    <!--whether the device is xiaomi-->
+    <bool name="is_xiaomi_device">false</bool>
+    <!--the vendor feature, it's value may be qcom,mediatek,leadcore or nvidia-->
+    <string name="vendor">qcom</string>
+</features>

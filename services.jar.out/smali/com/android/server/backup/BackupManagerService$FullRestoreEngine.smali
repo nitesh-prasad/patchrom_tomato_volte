@@ -912,7 +912,6 @@
     iput-wide v0, v2, Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;->mBytes:J
 
     .line 5194
-    :cond_0
     const/16 v19, 0x0
 
     move/from16 v0, v19

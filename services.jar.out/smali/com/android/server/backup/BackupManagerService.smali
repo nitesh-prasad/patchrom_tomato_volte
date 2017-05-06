@@ -11240,9 +11240,13 @@
     .line 8678
     const-string/jumbo v3, "fullback"
 
+    invoke-virtual/range {p1 .. p1}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v4
+
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v15, v3}, Lcom/android/server/backup/BackupManagerService;->startConfirmationUi(ILjava/lang/String;)Z
+    invoke-static {v0, v15, v3, v4}, Lcom/android/server/backup/BackupManagerServiceInjector;->startConfirmationUi(Lcom/android/server/backup/BackupManagerService;ILjava/lang/String;I)Z
 
     move-result v3
 
@@ -11350,11 +11354,6 @@
 
     .line 8685
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/os/PowerManager;->userActivity(JII)V
-
-    .line 8690
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v15, v2}, Lcom/android/server/backup/BackupManagerService;->startConfirmationTimeout(ILcom/android/server/backup/BackupManagerService$FullParams;)V
 
     .line 8693
     const-string/jumbo v3, "BackupManagerService"

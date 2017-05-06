@@ -4578,7 +4578,7 @@
     .line 1969
     const/16 v4, 0x7537
 
-    invoke-static {v4, v3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static/range {v26 .. v26}, Lcom/android/server/am/ActivityStackHook;->writeAmResumeActivityEventLog(Lcom/android/server/am/ActivityRecord;)V
 
     .line 1972
     const/4 v3, 0x0
@@ -5535,7 +5535,7 @@
     .line 952
     const/16 v1, 0x753c
 
-    invoke-static {v1, v2}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {p0, v0}, Lcom/android/server/am/ActivityStackHook;->writeAmFailedToPauseEventLog(Lcom/android/server/am/ActivityStack;Lcom/android/server/am/ActivityRecord;)V
 
     .line 956
     iget-object v1, v0, Lcom/android/server/am/ActivityRecord;->state:Lcom/android/server/am/ActivityStack$ActivityState;
@@ -6783,7 +6783,7 @@
     .line 3431
     const/16 v6, 0x7542
 
-    invoke-static {v6, v5}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {p1, p3}, Lcom/android/server/am/ActivityStackHook;->writeAmDestroyActivityEventLog(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
 
     .line 3435
     const/4 v3, 0x0
@@ -9180,7 +9180,7 @@
     .line 2955
     const/16 v6, 0x7531
 
-    invoke-static {v6, v5}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {p1, p4}, Lcom/android/server/am/ActivityStackHook;->writeAmFinishActivityEventLog(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
 
     .line 2958
     iget-object v0, v4, Lcom/android/server/am/TaskRecord;->mActivities:Ljava/util/ArrayList;
@@ -13800,7 +13800,7 @@
     .line 3659
     const/16 v8, 0x7531
 
-    invoke-static {v8, v7}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {v4, v8}, Lcom/android/server/am/ActivityStackHook;->writeAmFinishActivityEventLog(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
 
     .line 3663
     iget-object v7, v4, Lcom/android/server/am/ActivityRecord;->state:Lcom/android/server/am/ActivityStack$ActivityState;
@@ -17038,7 +17038,7 @@
     .line 875
     const/16 v2, 0x753d
 
-    invoke-static {v2, v0}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {v1}, Lcom/android/server/am/ActivityStackHook;->writeAmPauseActivityEventLog(Lcom/android/server/am/ActivityRecord;)V
 
     .line 878
     iget-object v0, p0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;

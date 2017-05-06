@@ -1044,6 +1044,20 @@
     :goto_2
     move-object/from16 v0, p0
 
+    iget-object v3, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbBackupTask;->mOutputFile:Landroid/os/ParcelFileDescriptor;
+
+    invoke-virtual {v3}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v3
+
+    invoke-static {v3}, Lcom/android/server/backup/BackupManagerServiceInjector;->isForceAllowBackup(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_9
+
+    move-object/from16 v0, p0
+
     iget-object v3, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbBackupTask;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-virtual {v3}, Lcom/android/server/backup/BackupManagerService;->deviceIsEncrypted()Z
@@ -1206,6 +1220,20 @@
 
     .line 3992
     :goto_4
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbBackupTask;->mOutputFile:Landroid/os/ParcelFileDescriptor;
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbBackupTask;->mOutputFile:Landroid/os/ParcelFileDescriptor;
+
+    invoke-virtual {v4}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v4
+
+    invoke-static {v3, v4}, Lcom/android/server/backup/BackupManagerServiceInjector;->writeMiuiBackupHeader(Landroid/os/ParcelFileDescriptor;I)V
+
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbBackupTask;->this$0:Lcom/android/server/backup/BackupManagerService;

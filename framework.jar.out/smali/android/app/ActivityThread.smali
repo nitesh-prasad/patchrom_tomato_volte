@@ -6864,20 +6864,23 @@
 
     if-eqz v2, :cond_17
 
-    .line 4710
     invoke-static {}, Ldalvik/system/VMRuntime;->getRuntime()Ldalvik/system/VMRuntime;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ldalvik/system/VMRuntime;->clearGrowthLimit()V
 
-    .line 4720
     :goto_a
+    move-object/from16 v0, p1
+
+    iget-object v2, v0, Landroid/app/ActivityThread$AppBindData;->appInfo:Landroid/content/pm/ApplicationInfo;
+
+    invoke-static {v2}, Lcom/miui/whetstone/app/WhetstoneAppManager;->trimHeapSizeIfNeeded(Landroid/content/pm/ApplicationInfo;)V
+
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskWrites()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v29
 
-    .line 4724
     .local v29, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     :try_start_5
     move-object/from16 v0, p1

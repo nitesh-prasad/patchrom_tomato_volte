@@ -23306,21 +23306,43 @@
 
     throw v5
 
-    .line 9904
     .end local v34    # "msg":Ljava/lang/String;
     .end local v38    # "providerRunning":Z
     .restart local v4    # "cpr":Lcom/android/server/am/ContentProviderRecord;
     :cond_2
+    invoke-static/range {p5 .. p5}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_miui_3
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p2
+
+    move/from16 v2, p5
+
+    invoke-direct {v0, v1, v2}, Lcom/android/server/am/ActivityManagerService;->getProviderInfoLocked(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;
+
+    move-result-object v5
+
+    if-nez v5, :cond_miui_3
+
+    const/16 p5, 0x0
+
+    const/16 v21, 0x0
+
+    goto :goto_0
+
+    :cond_miui_3
     const/4 v4, 0x0
 
-    .line 9905
     .local v4, "cpr":Lcom/android/server/am/ContentProviderRecord;
     const/4 v6, 0x0
 
     .local v6, "cpi":Landroid/content/pm/ProviderInfo;
     goto :goto_0
 
-    .line 9910
     .end local v4    # "cpr":Lcom/android/server/am/ContentProviderRecord;
     .end local v6    # "cpi":Landroid/content/pm/ProviderInfo;
     :cond_3

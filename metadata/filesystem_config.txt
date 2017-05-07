@@ -68,6 +68,8 @@ system/app/LiveWallpapersPicker 0 0 755 selabel=u:object_r:system_file:s0 capabi
 system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LockClock 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LockClock/LockClock.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MiGalleryLockscreen 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MiGalleryLockscreen/MiGalleryLockscreen.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NexusLauncher 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NexusLauncher/NexusLauncher.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/PacProcessor 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1715,6 +1717,8 @@ system/media/audio/alarms/Osmium.ogg 0 0 644 selabel=u:object_r:system_file:s0 c
 system/media/audio/alarms/Oxygen.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/Platinum.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/Scandium.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.android.fmradio.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/org.cyanogenmod.screencast.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/Adara.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/Aldebaran.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0

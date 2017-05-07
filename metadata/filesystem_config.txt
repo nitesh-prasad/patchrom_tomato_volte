@@ -2020,6 +2020,8 @@ system/priv-app/Snap 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Snap/Snap.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/StatementService 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/StatementService/StatementService.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/StockSettings 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/StockSettings/StockSettings.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SystemUI 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SystemUI/SystemUI.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/TeleService 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0

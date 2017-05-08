@@ -26,6 +26,8 @@ private-phone-priv-apps := \
 	CellBroadcastReceiver \
 	CMAudioService \
 	CMSettingsProvider \
+	CNEService \
+	com.qualcomm.location \
 	ExternalStorageProvider \
 	FMRadio \
 	FusedLocation \
@@ -33,8 +35,10 @@ private-phone-priv-apps := \
 	InputDevices \
 	ProximityCalibrate \
 	ProxyHandler \
+	qcrilmsgtunnel \
 	Screencast \
 	SharedStorageBackup \
 	Shell \
+	Snap \
 	StatementService 
 	

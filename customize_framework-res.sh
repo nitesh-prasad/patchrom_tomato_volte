@@ -38,7 +38,6 @@ function mergyXmlPart() {
 	done
 }
 
-if [ $1 = "framework-res" ]; then
-  applyPatch $1 $2
-  $XMLMERGYTOOL $1/res/values $2/res/values
-fi
+rm -f out/framework-res/res/values/bools.xml
+cp -f overlay/framework-res/res/values/bools.xml out/framework-res/res/values/bools.xml
+

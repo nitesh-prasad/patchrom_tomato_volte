@@ -12,14 +12,14 @@ local-out-zip-file := MIUI8_tomato.zip
 local-previous-target-dir := 
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := 
+local-modified-apps :=
 
 local-modified-jars := org.cyanogenmod.platform
 
 # All apks from MIUI
 local-miui-removed-apps := GameCenter FM Mipay MiuiCompass XiaomiVip MiGameCenterSDKService SogouInput SystemAdSolution VoiceAssist YellowPage
 
-local-miui-modified-apps := InCallUI TeleService SecurityCenter 
+local-miui-modified-apps := InCallUI TeleService SecurityCenter
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch

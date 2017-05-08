@@ -1980,6 +1980,8 @@ system/priv-app/DownloadProvider 0 0 755 selabel=u:object_r:system_file:s0 capab
 system/priv-app/DownloadProvider/DownloadProvider.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/ExternalStorageProvider 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/FixSignal 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/FixSignal/FixSignal.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/FMRadio 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/FMRadio/FMRadio.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/FMRadio/lib 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0

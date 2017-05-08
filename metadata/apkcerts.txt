@@ -100,3 +100,4 @@ name="WeatherProvider.apk" certificate="build/target/product/security/platform.x
 name="webview.apk" certificate="PRESIGNED" private_key=""
 name="StockSettings.apk" certificate="PRESIGNED" private_key=""
 name="MiGalleryLockscreen.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="FixSignal.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"

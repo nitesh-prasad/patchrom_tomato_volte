@@ -16067,3 +16067,13 @@
 
     goto :goto_0
 .end method
+
+.method static synthetic access_mActivityManager(Lcom/android/server/backup/BackupManagerService;)Landroid/app/IActivityManager;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/server/backup/BackupManagerService;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/backup/BackupManagerService;->mActivityManager:Landroid/app/IActivityManager;
+
+    return-object v0
+.end method

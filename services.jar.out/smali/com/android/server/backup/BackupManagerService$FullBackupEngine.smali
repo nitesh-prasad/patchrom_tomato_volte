@@ -148,7 +148,7 @@
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupEngine;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     # getter for: Lcom/android/server/backup/BackupManagerService;->mActivityManager:Landroid/app/IActivityManager;
-    invoke-static {v1}, Lcom/android/server/backup/BackupManagerService;->access$700(Lcom/android/server/backup/BackupManagerService;)Landroid/app/IActivityManager;
+    invoke-static {v1}, Lcom/android/server/backup/BackupManagerService;->access_mActivityManager(Lcom/android/server/backup/BackupManagerService;)Landroid/app/IActivityManager;
 
     move-result-object v1
 

@@ -18,3 +18,13 @@ ro.setupwizard.mode=OPTIONAL
 ro.com.google.gmsversion=6.0_r2
 drm.service.enabled=true
 
+#Additional Tweaks OSBUSTERS.NET
+#####
+wifi.supplicant_scan_interval=497
+power.saving.mode=1
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+ro.vold.umsdirtyratio=20
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+

@@ -13,6 +13,7 @@ private-phone-apps := \
 	PacProcessor \
 	PicoTts \
 	PrintSpooler \
+	shutdownlistener \
 	Stk \
 	telresources \
 	TimeService \

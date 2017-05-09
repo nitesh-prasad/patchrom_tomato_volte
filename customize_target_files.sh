@@ -12,3 +12,5 @@ rm -rf out/target_files/SYSTEM/vendor/preinstall
 #Added device features
 cp -f other/YUREKA.xml out/target_files/SYSTEM/etc/device_features
 
+#Added multi cust variants for miui
+ -cp -rf other/cust/in out/target_files/DATA/miui/cust

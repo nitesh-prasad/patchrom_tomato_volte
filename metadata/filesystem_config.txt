@@ -1127,6 +1127,7 @@ system/lib/content-types.properties 0 0 644 selabel=u:object_r:system_file:s0 ca
 system/lib/crtbegin_so.o 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/crtend_so.o 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/lib7z.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/libDiracAPI_SHARED.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libEGL.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libETC1.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libFFTEm.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1395,6 +1396,7 @@ system/lib/soundfx/libaudiopreprocessing.so 0 0 644 selabel=u:object_r:system_fi
 system/lib/soundfx/libbundlewrapper.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libdownmix.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libeffectproxy.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/soundfx/libdirac.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libldnhncr.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libqcompostprocbundle.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libqcomvisualizer.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -2207,6 +2209,7 @@ system/vendor/bin/slim_daemon 0 2000 755 selabel=u:object_r:location_exec:s0 cap
 system/vendor/bin/thermal-engine 0 2000 755 selabel=u:object_r:thermal-engine_exec:s0 capabilities=0x0
 system/vendor/etc 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/etc/audio_effects.conf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/vendor/etc/diracmobile.config 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/etc/msm_irqbalance.conf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib/libC2D2.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0

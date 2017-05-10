@@ -17,6 +17,8 @@ ro.miui.mnc=9999
 ro.setupwizard.mode=OPTIONAL
 ro.com.google.gmsversion=6.0_r2
 drm.service.enabled=true
+#enable dirac effect for speaker
+persist.audio.dirac.speaker=true
 
 #Additional Tweaks OSBUSTERS.NET
 #####

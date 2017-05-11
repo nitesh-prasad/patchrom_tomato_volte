@@ -68,6 +68,18 @@ system/app/LiveWallpapersPicker 0 0 755 selabel=u:object_r:system_file:s0 capabi
 system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LockClock 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LockClock/LockClock.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxAudio 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxAudio/MaxxAudio.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxAudio/lib 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxAudio/lib/arm 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxAudio/lib/arm/libEQGraphCore.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxAudio/lib/arm/libEQGraphLib.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxService 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxService/MaxxService.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxService/lib 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxService/lib/arm 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxService/lib/arm/libmaxxeffectwrapper.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MaxxService/lib/arm/libosl-maxxaudio-itf.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/MiGalleryLockscreen 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/MiGalleryLockscreen/MiGalleryLockscreen.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NexusLauncher 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1365,6 +1377,10 @@ system/lib/libwpa_client.so 0 0 644 selabel=u:object_r:system_file:s0 capabiliti
 system/lib/libxml2.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libyl_params.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libz.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/libAndroidAlgSys.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/libgnustl_shared.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/libMAM2-AlgFX-Coretex_A9.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/libstagefright_soft_dtsdec.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/drm 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/drm/libfwdlockengine.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1398,6 +1414,7 @@ system/lib/soundfx/libdownmix.so 0 0 644 selabel=u:object_r:system_file:s0 capab
 system/lib/soundfx/libeffectproxy.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libdirac.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libldnhncr.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/soundfx/libmaxxeffect-cembedded.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libqcompostprocbundle.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libqcomvisualizer.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/soundfx/libqcomvoiceprocessing.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1720,7 +1737,9 @@ system/media/audio/alarms/Oxygen.ogg 0 0 644 selabel=u:object_r:system_file:s0 c
 system/media/audio/alarms/Platinum.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/Scandium.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/com.android.fmradio.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/media/theme/miui_mod_icons/org.cyanogenmod.snap.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.waves.maxxaudio.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.waves.maxxaudio.MaxxAudioActivity.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/org.cyanogenmod.screencast.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/org.cyanogenmod.screencast.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/Adara.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -2209,7 +2228,9 @@ system/vendor/bin/slim_daemon 0 2000 755 selabel=u:object_r:location_exec:s0 cap
 system/vendor/bin/thermal-engine 0 2000 755 selabel=u:object_r:thermal-engine_exec:s0 capabilities=0x0
 system/vendor/etc 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/etc/audio_effects.conf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/vendor/etc/default.mps 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/etc/diracmobile.config 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/vendor/etc/maxx_conf.ini 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/etc/msm_irqbalance.conf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib/libC2D2.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -2384,6 +2405,7 @@ system/vendor/lib/mediadrm 0 2000 755 selabel=u:object_r:system_file:s0 capabili
 system/vendor/lib/mediadrm/libdrmclearkeyplugin.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib/mediadrm/libwvdrmengine.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib/soundfx 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/vendor/lib/soundfx/libomx-dts.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib/soundfx/libqcbassboost.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib/soundfx/libqcreverb.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib/soundfx/libqcvirt.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0

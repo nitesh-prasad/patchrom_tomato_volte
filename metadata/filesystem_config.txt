@@ -1740,7 +1740,7 @@ system/media/theme/miui_mod_icons/com.android.fmradio.png 0 0 644 selabel=u:obje
 system/media/theme/miui_mod_icons/com.waves.maxxaudio.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/com.waves.maxxaudio.MaxxAudioActivity.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/org.cyanogenmod.screencast.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/media/theme/miui_mod_icons/org.cyanogenmod.screencast.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/org.cyanogenmod.snap.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/Adara.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/Aldebaran.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0

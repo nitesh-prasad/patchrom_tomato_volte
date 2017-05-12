@@ -7,6 +7,7 @@ private-phone-apps := \
 	BluetoothExt \
 	BluetoothMidiService \
 	CertInstaller \
+	DocumentsUI \
 	KeyChain \
 	LatinIME \
 	LiveWallpapers \

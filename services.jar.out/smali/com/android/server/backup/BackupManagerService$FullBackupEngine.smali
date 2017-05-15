@@ -134,26 +134,40 @@
 .end method
 
 .method private tearDown(Landroid/content/pm/PackageInfo;)V
-    .locals 2
+    .locals 3
     .param p1, "pkg"    # Landroid/content/pm/PackageInfo;
 
     .prologue
-    .line 3596
     if-eqz p1, :cond_0
 
-    .line 3597
     iget-object v0, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 3598
     .local v0, "app":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_0
 
-    .line 3599
+    iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupEngine;->this$0:Lcom/android/server/backup/BackupManagerService;
+
+    # getter for: Lcom/android/server/backup/BackupManagerService;->mActivityManager:Landroid/app/IActivityManager;
+    invoke-static {v1}, Lcom/android/server/backup/BackupManagerService;->access$700(Lcom/android/server/backup/BackupManagerService;)Landroid/app/IActivityManager;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/server/backup/BackupManagerService$FullBackupEngine;->mOutputFile:Landroid/os/ParcelFileDescriptor;
+
+    invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v2
+
+    invoke-static {v1, v0, v2}, Lcom/android/server/backup/BackupManagerServiceInjector;->tearDownAgentAndKill(Landroid/app/IActivityManager;Landroid/content/pm/ApplicationInfo;I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupEngine;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-virtual {v1, v0}, Lcom/android/server/backup/BackupManagerService;->tearDownAgentAndKill(Landroid/content/pm/ApplicationInfo;)V
 
-    .line 3595
     .end local v0    # "app":Landroid/content/pm/ApplicationInfo;
     :cond_0
     return-void
@@ -618,22 +632,27 @@
 
     iget-object v3, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 3404
     const/4 v5, 0x1
 
-    .line 3403
     invoke-virtual {v2, v3, v5}, Lcom/android/server/backup/BackupManagerService;->bindToAgentSynchronous(Landroid/content/pm/ApplicationInfo;I)Landroid/app/IBackupAgent;
 
     move-result-object v4
 
-    .line 3405
     .local v4, "agent":Landroid/app/IBackupAgent;
     if-eqz v4, :cond_c
 
-    .line 3406
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/android/server/backup/BackupManagerService$FullBackupEngine;->mOutputFile:Landroid/os/ParcelFileDescriptor;
+
+    invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v2
+
+    invoke-static {v4, v2}, Lcom/android/server/backup/BackupManagerServiceInjector;->linkToDeath(Landroid/app/IBackupAgent;I)V
+
     const/4 v13, 0x0
 
-    .line 3409
     .local v13, "pipes":[Landroid/os/ParcelFileDescriptor;
     :try_start_0
     move-object/from16 v0, p0
@@ -884,15 +903,15 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 3476
     :cond_4
     :goto_3
+    invoke-static {v4}, Lcom/android/server/backup/BackupManagerServiceInjector;->unlinkToDeath(Landroid/app/IBackupAgent;)V
+
+    :goto_miui_0
     invoke-direct/range {p0 .. p1}, Lcom/android/server/backup/BackupManagerService$FullBackupEngine;->tearDown(Landroid/content/pm/PackageInfo;)V
 
-    .line 3477
     return v14
 
-    .line 3424
     .restart local v10    # "app":Landroid/content/pm/ApplicationInfo;
     .restart local v12    # "isSharedStorage":Z
     .restart local v13    # "pipes":[Landroid/os/ParcelFileDescriptor;
@@ -1189,5 +1208,5 @@
     .line 3474
     const/16 v14, -0x3eb
 
-    goto/16 :goto_3
+    goto/16 :goto_miui_0
 .end method

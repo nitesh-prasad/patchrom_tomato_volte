@@ -7881,21 +7881,27 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8851
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v5
+
+    const/16 v6, 0x3e8
+
+    if-eq v5, v6, :cond_miui_0
+
     iget-object v5, p0, Lcom/android/server/backup/BackupManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "android.permission.BACKUP"
+    const-string v6, "android.permission.BACKUP"
 
-    const-string/jumbo v7, "acknowledgeFullBackupOrRestore"
+    const-string v7, "acknowledgeFullBackupOrRestore"
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8853
+    :cond_miui_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 8857
     .local v2, "oldId":J
     :try_start_0
     iget-object v6, p0, Lcom/android/server/backup/BackupManagerService;->mFullConfirmations:Landroid/util/SparseArray;
@@ -11573,7 +11579,11 @@
     .line 8775
     const-string/jumbo v6, "fullrest"
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/server/backup/BackupManagerService;->startConfirmationUi(ILjava/lang/String;)Z
+    invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v7
+
+    invoke-static {p0, v5, v6, v7}, Lcom/android/server/backup/BackupManagerServiceInjector;->startConfirmationUi(Lcom/android/server/backup/BackupManagerService;ILjava/lang/String;I)Z
 
     move-result v6
 
@@ -11692,63 +11702,49 @@
 
     move-result-wide v8
 
-    .line 8783
     const/4 v7, 0x0
 
-    .line 8784
     const/4 v10, 0x0
 
-    .line 8782
     invoke-virtual {v6, v8, v9, v7, v10}, Landroid/os/PowerManager;->userActivity(JII)V
 
-    .line 8787
-    invoke-virtual {p0, v5, v4}, Lcom/android/server/backup/BackupManagerService;->startConfirmationTimeout(ILcom/android/server/backup/BackupManagerService$FullParams;)V
+    const-string v6, "BackupManagerService"
 
-    .line 8790
-    const-string/jumbo v6, "BackupManagerService"
-
-    const-string/jumbo v7, "Waiting for full restore completion..."
+    const-string v7, "Waiting for full restore completion..."
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8791
     invoke-virtual {p0, v4}, Lcom/android/server/backup/BackupManagerService;->waitForCompletion(Lcom/android/server/backup/BackupManagerService$FullParams;)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 8794
     :try_start_9
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
 
-    .line 8798
     :goto_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8799
-    const-string/jumbo v6, "BackupManagerService"
+    const-string v6, "BackupManagerService"
 
-    const-string/jumbo v7, "Full restore processing complete."
+    const-string v7, "Full restore processing complete."
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8747
     return-void
 
-    .line 8795
     :catch_2
     move-exception v1
 
-    .line 8796
     .restart local v1    # "e":Ljava/io/IOException;
-    const-string/jumbo v6, "BackupManagerService"
+    const-string v6, "BackupManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "Error trying to close fd after full restore: "
+    const-string v8, "Error trying to close fd after full restore: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

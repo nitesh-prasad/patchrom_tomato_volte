@@ -32273,9 +32273,6 @@
 
     aput v4, v8, v5
 
-<<<<<<< HEAD
-    .line 3532
-=======
     invoke-static {v6}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
@@ -32284,8 +32281,7 @@
 
     move-result-object v8
 
-    .line 3533
->>>>>>> 904f8f5... Fix secondpatch rejects
+    .line 3532
     .end local v8    # "gids":[I
     .end local v29    # "mountServiceInternal":Landroid/os/storage/MountServiceInternal;
     .end local v31    # "permGids":[I

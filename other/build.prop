@@ -1,0 +1,32 @@
+persist.sys.klo=on
+persist.sys.mcd_config_file=/system/etc/mcd_default.conf
+persist.sys.miui_feature_config=/system/etc/miui_feature/lite.conf
+ro.miui.has_real_blur=0
+##
+# MIUI Properties
+ro.modversion=MIUI
+ro.xiaomi.developerid=nitesh9
+persist.sys.timezone=Asia/Calcutta
+ro.miui.region=IN
+ro.miui.region2=IN
+ro.miui.cust_variant=eu
+ro.product.locale.language=en
+ro.product.locale.region=US
+ro.miui.mcc=9998
+ro.miui.mnc=9999
+ro.setupwizard.mode=OPTIONAL
+ro.com.google.gmsversion=6.0_r2
+drm.service.enabled=true
+#enable dirac effect for speaker
+persist.audio.dirac.speaker=true
+
+#Additional Tweaks OSBUSTERS.NET
+#####
+wifi.supplicant_scan_interval=497
+power.saving.mode=1
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+ro.vold.umsdirtyratio=20
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+

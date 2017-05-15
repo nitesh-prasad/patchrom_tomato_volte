@@ -1779,7 +1779,6 @@
     iput-wide v0, v2, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mBytes:J
 
     .line 6542
-    :cond_0
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -2162,6 +2161,22 @@
 
     .line 6579
     .local v12, "pkg":Landroid/content/pm/PackageInfo;
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mInputFile:Landroid/os/ParcelFileDescriptor;
+
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v19 .. v19}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v19
+
+    invoke-static/range {v19 .. v19}, Lcom/android/server/backup/BackupManagerServiceInjector;->isForceAllowBackup(I)Z
+
+    move-result v19
+
+    if-nez v19, :cond_7
+
     iget-object v0, v12, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     move-object/from16 v19, v0
@@ -5393,6 +5408,20 @@
 
     .line 6182
     .local v43, "policy":Lcom/android/server/backup/BackupManagerService$RestorePolicy;
+    move-object/from16 v0, v35
+
+    iget-wide v8, v0, Lcom/android/server/backup/BackupManagerService$FileMetadata;->size:J
+
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mInputFile:Landroid/os/ParcelFileDescriptor;
+
+    invoke-virtual {v5}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v5
+
+    invoke-static {v8, v9, v5}, Lcom/android/server/backup/BackupManagerServiceInjector;->addRestoredSize(JI)V
+
     invoke-static {}, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->-getcom_android_server_backup_BackupManagerService$RestorePolicySwitchesValues()[I
 
     move-result-object v5
@@ -5513,13 +5542,17 @@
 
     iget-object v5, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->this$0:Lcom/android/server/backup/BackupManagerService;
 
-    invoke-static {v5}, Lcom/android/server/backup/BackupManagerService;->-get2(Lcom/android/server/backup/BackupManagerService;)Landroid/content/pm/PackageManager;
+    iget-object v5, v5, Lcom/android/server/backup/BackupManagerService;->mContext:Landroid/content/Context;
 
-    move-result-object v5
+    move-object/from16 v0, p0
 
-    const/4 v7, 0x0
+    iget-object v7, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mInputFile:Landroid/os/ParcelFileDescriptor;
 
-    invoke-virtual {v5, v6, v7}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v7}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v7
+
+    invoke-static {v5, v6, v7}, Lcom/android/server/backup/BackupManagerServiceInjector;->getApplicationInfo(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v5
 
@@ -7180,6 +7213,20 @@
     const-string/jumbo v22, "Invalid restore data; aborting."
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/16 v21, 0x1
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mInputFile:Landroid/os/ParcelFileDescriptor;
+
+    move-object/from16 v22, v0
+
+    invoke-virtual/range {v22 .. v22}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v22
+
+    invoke-static/range {v21 .. v22}, Lcom/android/server/backup/BackupManagerServiceInjector;->errorOccur(II)V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
@@ -7385,10 +7432,27 @@
     move-result-object v14
 
     .line 5980
-    if-eqz v14, :cond_2
+    if-eqz v14, :cond_miui_7
 
     .line 5981
     const/4 v12, 0x1
+
+    :cond_miui_7
+    if-nez v14, :cond_2
+
+    const/16 v21, 0x3
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mInputFile:Landroid/os/ParcelFileDescriptor;
+
+    move-object/from16 v22, v0
+
+    invoke-virtual/range {v22 .. v22}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v22
+
+    invoke-static/range {v21 .. v22}, Lcom/android/server/backup/BackupManagerServiceInjector;->errorOccur(II)V
 
     goto/16 :goto_3
 
@@ -7399,6 +7463,20 @@
     const-string/jumbo v22, "Archive is encrypted but no password given"
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/16 v21, 0x3
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mInputFile:Landroid/os/ParcelFileDescriptor;
+
+    move-object/from16 v22, v0
+
+    invoke-virtual/range {v22 .. v22}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v22
+
+    invoke-static/range {v21 .. v22}, Lcom/android/server/backup/BackupManagerServiceInjector;->errorOccur(II)V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_1
     .catchall {:try_start_a .. :try_end_a} :catchall_2
@@ -8535,6 +8613,20 @@
 
     .line 6444
     :cond_2
+    iget-object v1, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mInputFile:Landroid/os/ParcelFileDescriptor;
+
+    invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor;->getFd()I
+
+    move-result v2
+
+    invoke-static {v1, v2}, Lcom/android/server/backup/BackupManagerServiceInjector;->isNeedBeKilled(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
     :try_start_1
     const-string/jumbo v1, "BackupManagerService"
 

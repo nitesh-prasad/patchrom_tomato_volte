@@ -23686,6 +23686,32 @@
     move-wide/from16 v1, v40
 
     invoke-direct {v0, v1, v2, v5}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
+
+    if-nez v6, :cond_miui_c
+
+    invoke-static/range {p5 .. p5}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_miui_c
+
+    const/16 p5, 0x0
+
+    move/from16 v1, p5
+
+    invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
+
+    move-result-object v5
+
+    const/16 v10, 0xc00
+
+    move-object/from16 v0, p2
+
+    invoke-interface {v5, v0, v10, v1}, Landroid/content/pm/IPackageManager;->resolveContentProvider(Ljava/lang/String;II)Landroid/content/pm/ProviderInfo;
+
+    move-result-object v6
+
+    :cond_miui_c
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_5
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -32247,7 +32273,19 @@
 
     aput v4, v8, v5
 
+<<<<<<< HEAD
     .line 3532
+=======
+    invoke-static {v6}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v4
+
+    invoke-static {v4, v8}, Lcom/android/server/am/ActivityManagerServiceInjector;->computeGids(I[I)[I
+
+    move-result-object v8
+
+    .line 3533
+>>>>>>> 904f8f5... Fix secondpatch rejects
     .end local v8    # "gids":[I
     .end local v29    # "mountServiceInternal":Landroid/os/storage/MountServiceInternal;
     .end local v31    # "permGids":[I

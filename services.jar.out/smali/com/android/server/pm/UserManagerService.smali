@@ -1190,7 +1190,13 @@
     .line 1348
     :cond_9
     :try_start_d
-    invoke-direct/range {p0 .. p0}, Lcom/android/server/pm/UserManagerService;->getNextAvailableIdLocked()I
+    move-object/from16 v0, p0
+
+    move/from16 v1, p2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lcom/android/server/pm/UserManagerService;->checkAndGetNewUserId(IZ)I
 
     move-result v18
 

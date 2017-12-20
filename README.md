@@ -38,7 +38,7 @@ Then to sync up:
 
 $ repo sync
 
-$ git clone https://github.com/nitesh-prasad/patchrom_tomato.git tomato
+$ git clone https://github.com/nitesh-prasad/patchrom_tomato_volte.git tomato
 
 Build
 --------
